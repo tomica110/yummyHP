@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .pabg
+      {
+        display: flex;
+        position: static;
+        z-index: 100001;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #4DB6AC;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .loding-center
+      {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+        width: 60vw;
+        height: 60vh;
+      }
+      .loading-image
+      {
+        width: 50vw;
+        height: 60vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-loader pabg">
+    <div class="loding-center">
+    <img src="../IMG/yummy_ロゴ2.png" alt="オオキメのロゴ" class="loading-image">
+    </div>
+  </div>
+
+  </body>
+</html>

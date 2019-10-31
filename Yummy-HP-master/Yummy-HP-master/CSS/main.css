@@ -1,0 +1,608 @@
+
+/* 追いかけてくるカーソル */
+
+/* body
+{
+  position: relative;
+  cursor: none;
+  /* //もともとあるカーソルは見えなくなるようにする */
+/* } */
+
+/* .cursor, .follower
+{
+  border-radius: 50%;
+  position: absolute;
+  /* //bodyの一番左上になるように配置する */
+  /* top: 0;
+  left: 0;
+  cursor: none; */
+  /* //もともとあるカーソルは見えなくなるようにする */
+  /* pointer-events: none; */
+  /* //他の要素がクリックできなくならないように */
+}
+
+/* .cursor {
+  z-index: 1001; */
+  /* //どの要素よりも一番上になるようにする */
+  /* width: 16px;
+  height: 16px;
+  background-color: #4FC3F7;
+} */
+
+/* .follower {
+  /* border-radius: 50%; */
+  /* width: 32px;
+  height: 32px;
+  background-color: #fdfe00;
+  z-index: 1000; */
+   /* //カーソルの次に上になるようにする */
+/* }  */
+
+
+
+/* ローディング画面 */
+
+.aaaaaaaaaaaaaaaaaaaaa
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: static;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #4DB6AC;
+}
+
+.loding-center
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+  width: 60vw;
+  height: 60vh;
+}
+.loading-image
+{
+  width: 50vw;
+  height: 60vh;
+}
+.loding-bar
+{
+
+}
+
+
+/* メインコンテンツ */
+body
+{
+  position: relative;
+}
+main
+{
+
+}
+/* top画面 */
+.top-display,.app-introduce
+{
+  width: 100vw;
+  height: 130vh;
+}
+/* <!-- 画像重ねてる所 --> */
+.layar
+{
+ display: flex;
+ margin-left: 200px;
+ margin-top: 100px;
+ position: relative;
+}
+.forword-pic
+{
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  left: 90px;
+  z-index: 2;
+
+  overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+
+}
+.backword-pic
+{
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  top: 90px;
+  z-index: 1;
+}
+.title-letter
+{
+  display: flex;
+  width: 400px;
+  height: 150px;
+  position: absolute;
+  top: 50px;
+  right: 450px;
+  z-index: 3;
+
+}
+.rotateLitle
+{
+  transform: rotate( -12deg);
+}
+/* ゆらゆら */
+.drop {
+  position:relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 200px;
+  background: rgba(255, 244, 79, 0.8);
+  animation: rotate 5s ease 0s infinite normal both,
+    stretch 1.5s ease 0s infinite alternate both;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes stretch {
+  0% {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+/* ふわふわ */
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+.yummy-concept
+{
+  /* background-color:green; */
+ display: inline-flex;
+ align-items: center;
+ justify-content: space-around;
+ flex-flow: column;
+ width: 400px;
+ height: 300px;
+ position: absolute;
+ top: 200px;
+ right: 300px;
+
+  overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+.yummy-concept-inner
+{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+.english-concept
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  position: absolute;
+  top: 650px;
+  left: 10%;
+  z-index: 3;
+}
+.english-concept h1
+{
+  display: flex;
+}
+.parallaxObj
+{
+  background-position: 50% 0px;
+	background-repeat: no-repeat;
+	width: 100%;
+  height: 150vh;
+	position: relative;
+	overflow: hidden;
+
+}
+
+.circle
+{
+  background-color: rgba(255,244,79,0.6);
+	border-radius: 50%;
+	position: absolute;
+  z-index: -3;
+}
+.circle1
+{
+  width: 500px;
+	height: 600px;
+	top: 200px;
+	left: -15%;
+}
+.circle2
+{
+  width: 150px;
+	height: 150px;
+	top: 30px;
+	left: 90%;
+}
+.circle3
+{
+  width: 450px;
+	height: 450px;
+	top: 350px;
+	left: 50%;
+}
+.circle4
+{
+  width: 400px;
+	height: 400px;
+	top: 10px;
+	left: 25%;
+}
+.circle5
+{
+  width: 100px;
+	height: 100px;
+	top: 400px;
+	left: 90%;
+}
+.circle6
+{
+  width: 90px;
+  height: 90px
+  top: 480px;
+  left: 80%;
+}
+
+/* アプリ紹介 */
+.app-introduce
+{
+ position: relative;
+ width: 100vw;
+ height: 120vh;
+}
+.ourapp
+{
+ position: absolute;
+ left: 0!important;
+}
+.back-copy-wrap
+{
+  position: absolute;
+  width: 100%;
+  top: calc( 25% + 20px);
+  left: 0;
+  transform: translateY(-50%);
+  overflow: hidden;
+  white-space: nowrap;
+
+}
+@keyframes backLoop
+{
+  0%{
+    transform: translate3d(0,0,0);
+  }
+  100%{
+    transform: translate3d(-50%,0,0);
+  }
+}
+.back-copy
+{
+  font-size: 0;
+  display: inline-block;
+  animation-name: backLoop ;
+  animation-duration: 36s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+  animation-delay: 2s;
+}
+.text
+{
+  font-size:9vw;
+  display: inline-block;
+  /* font-size: 17.3333vw; */
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+[data-nointaract]
+{
+  pointer-events: none;
+  user-select: none;
+}
+.swiper-container
+{
+  width: 60vw;
+  height: 70vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  left: 20%;
+}
+.swiper-slide
+{
+  /* background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; */
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* .app-frame-small
+{
+  width: 25vw;
+  height: 60vh;
+}
+.app-frame-large
+{
+  width: 30vw;
+  height: 66vh;
+  margin: 0 40px;
+
+} */
+.app-introduce-inner
+{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  position: absolute;
+  top: 550px;
+  left: 10%;
+  z-index: 3;
+
+}
+.inner-inner
+{
+  display: inline-flex;
+  margin: 0 auto;
+  flex-flow: column;
+  align-items: center;
+  width: 80%;
+}
+.applications
+{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+}
+.applications a
+{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 50%;
+}
+.ios-app-link,.android-app-link
+{
+  width: 50%;
+  height: 15vh;
+
+}
+.ios-app-link
+{
+
+}
+.android-app-link
+{
+  height: 8vh;
+  width: 40%;
+}
+/* promotion-video */
+.Promotion-Video, .twitter, .instagram {
+  display: inline-block;
+}
+
+/* Instagram */
+.insta-list {
+  width: 1152px;
+  margin: 0 auto;
+  font-size: 25px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 288px 288px 288px 288px;
+  grid-template-rows: 150px 150px 150px 150px 150px 150px;
+  margin-top: 100px;
+}
+
+/* .insta-list01 {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 300px 300px;
+}
+
+.insta-list02 {
+  margin-top: 80px;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 300px 300px;
+}
+
+.insta-list-in-list02 {
+  margin-top: 200px;
+}
+
+.insta-list-in-list04 {
+  margin-top: 60px;
+} */
+
+.insta-article {
+  width: 288px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.insta-article01 {
+  background-color: #dd326e;
+  opacity: 1;
+  grid-row: 1 / 3;
+}
+.insta-article02 {
+  background-color: #dd326e;
+  opacity: 0.9;
+  grid-row: 2 / 4;
+}
+.insta-article03 {
+  background-color: #dd326e;
+  opacity: 0.8;
+  grid-row: 1 / 3;
+}
+.insta-article04 {
+  background-color: #dd326e;
+  opacity: 0.7;
+  grid-row: 2 / 4;
+}
+.insta-article05 {
+  background-color: #dd326e;
+  opacity: 0.6;
+  grid-row: 3 / 5;
+}
+.insta-article06 {
+  background-color: #dd326e;
+  opacity: 0.5;
+  grid-row: 4 / 6;
+}
+.insta-article07 {
+  background-color: #dd326e;
+  opacity: 0.4;
+  grid-row: 3 / 5;
+}
+.insta-article08 {
+  background-color: #dd326e;
+  opacity: 0.3;
+  grid-row: 4 / 6;
+}
+.insta-article09 {
+  background-color: #dd326e;
+  opacity: 0.2;
+  grid-row: 5 / 7;
+}
+.insta-article10 {
+  background-color: #dd326e;
+  opacity: 0.1;
+  grid-row: 5 / 7;
+  grid-column: 3;
+}
+
+
+
+
+
+/* twitter */
+.twitter-list {
+  width: 500px;
+  height: 550px;
+  overflow: scroll;
+  scrollbar-width: 0;
+  position: relative;
+}
+
+/* .twitter {
+  position: relative; 
+} */
+
+.twitter-more {
+  position: sticky;
+  /* position: absolute; */
+  bottom: 20px;
+  margin-left: 330px;
+  text-decoration: none;
+  width: 150px;
+  height: 50px;
+  background-color: #1DA1F3;
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* opacity: 0.6; */
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.twitter-more:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #2DB1FF;
+}
+
+
+
+
+
+.sns-wrapper {
+  padding-top: 120px;
+  width: 1152px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 580px 580px;
+}
+
+.Promotion-Video, .twitter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.youtube {
+  margin-top: 60px;
+}
+
+.instagram {
+  grid-column: 1/ 3;
+}
+
+/* フッター */
